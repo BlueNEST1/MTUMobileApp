@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Add Broker"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--EditText for adding employee name-->
+    <EditText
+        android:id="@+id/idEdtEmployeeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_title"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter Employee Name"
+        android:inputType="textPersonName" />
+
+    <!--EditText for adding employee phone-->
+    <EditText
+        android:id="@+id/idEdtEmployeeEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmployeeName"
+        android:layout_margin="10dp"
+        android:hint="Enter employee email"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress" />
+
+    <!--EditText for adding employee address-->
+    <EditText
+        android:id="@+id/idEdtEmployeePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmployeeEmail"
+        android:layout_margin="10dp"
+        android:hint="Enter employee password"
+        android:inputType="textPassword" />
+
+    <!--Button for adding data to Firebase-->
+    <Button
+        android:id="@+id/idBtnSendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idEdtEmployeePassword"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/button_bg"
+        android:text="Submit"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnAddBroker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_bg"
+        android:text="Broker List"
+        android:textAllCaps="false" />
+
+</RelativeLayout>
